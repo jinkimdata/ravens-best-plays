@@ -2950,7 +2950,23 @@
 });
 
 var ravensBest = {
-    init: function() {},
+    init: function() {
+        $(".expandButton").on("click touchend", function() {
+            console.log($(".expandButton").data());
+            if ($(".expandButton").data().status === 0) {
+                $(".landscape").fadeOut(100, function() {
+                    $(".expandable").addClass("expanded");
+                });
+                $(".expandButton").text("- Collapse -");
+                $(".expandButton").data("status", 1);
+            } else {
+                $(".landscape").fadeIn();
+                $(".expandable").removeClass("expanded");
+                $(".expandButton").text("- Expand -");
+                $(".expandButton").data("status", 0);
+            }
+        });
+    },
     share: function() {
         $(".icon-twitter").on("click", function() {
             var tweet = "";

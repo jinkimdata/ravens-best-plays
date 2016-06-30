@@ -18,8 +18,9 @@ html(class="no-js", lang="en")
 		meta(name="description", content="")
 		meta(name="author", content="Jin Bae Kim") 
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
-		link(rel="stylesheet", type="text/css", href="#{datalink}css/style.css")
+		link(rel="stylesheet", type="text/css", href="#{datalink}/fontello/css/fontello.css")
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat")
+		link(rel="stylesheet", type="text/css", href="#{datalink}css/style.css")
 
 		//Facebook Stuff
 		meta(property="og:title", content="")
@@ -41,19 +42,24 @@ html(class="no-js", lang="en")
 		include includes/omniture.html
 		
 		.container
-			each play in plays
+			each play, index in plays
 				.playBlock
 					.headlineBlock
 						h2 #{play.playName}
 						.stripes.stripes--lightPurple
 						.stripes.stripes--darkPurple
 					.textBlock
-						p #{play.playDate}
-						p #{play.playText}
-						a(href="#{play.playVideo}") Watch the video.
+						.expandableText.expandable
+							p #{play.playDate}
+							p #{play.playText}
+							.fade
+						p.expandButton(data-status=0) - Expand -
 					.imageBlock
-						img(src="https://placeholdit.imgix.net/~text?txtsize=33&w=350&h=700")
+						img.landscape(src="https://placeholdit.imgix.net/~text?txtsize=33&w=1600&h=900")
+						img.cutout(src="https://placeholdit.imgix.net/~text?txtsize=33&w=900&h=1600")
+						a(href="#{play.playVideo}") Watch the video.
 					.button.button--down
+						i.icon-angle-circled-down
 		//- #leaderboard			
 		//- 	include includes/ad-for-body.html
 		

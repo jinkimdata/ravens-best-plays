@@ -463,8 +463,18 @@ th {
 
 /* General Styles */
 body {
-  font-size: 14px;
-  font-family: "Lato", sans-serif;
+  font-size: 14px; }
+  @media (min-width: 600px) {
+    body {
+      font-size: 16px; } }
+  @media (min-width: 800px) {
+    body {
+      font-size: 18px; } }
+
+p, a {
+  font-family: "Lato", sans-serif; }
+
+p {
   color: white; }
 
 a {
@@ -475,9 +485,13 @@ a {
   margin-top: 50px; }
 
 .playBlock {
+  position: relative;
   width: 100%;
   height: calc(100vh - 50px);
   background: repeating-linear-gradient(45deg, black, black 0.3em, #0C0C0C 0.3em, #0C0C0C 0.6em); }
+  .playBlock p, .playBlock a {
+    line-height: 1.2em;
+    margin: .5em 0; }
 
 .headlineBlock {
   position: relative; }
@@ -497,20 +511,90 @@ a {
     .headlineBlock .stripes--darkPurple {
       background: repeating-linear-gradient(45deg, #3E1D65, #3E1D65 0.3em, #24034B 0.3em, #24034B 0.6em);
       bottom: 0; }
+  @media (min-width: 800px) {
+    .headlineBlock h2 {
+      margin: .6em .5em;
+      font-size: 2.5em; }
+    .headlineBlock .stripes {
+      height: 3em; } }
 
 .textBlock {
   width: 100%;
   float: left;
-  padding: 1em; }
+  padding: .5em; }
+  @media (min-width: 600px) {
+    .textBlock {
+      padding: 1em; } }
+  @media (min-width: 800px) {
+    .textBlock {
+      width: 65%; } }
 
 .expandableText {
-  height: 5em; }
+  position: relative;
+  width: 100%;
+  height: 7em;
+  line-height: 1em;
+  text-overflow: ellipsis;
+  white-space: initial;
+  overflow: hidden; }
+  .expandableText.expanded {
+    height: auto; }
+    .expandableText.expanded .fade {
+      display: none; }
+  @media (min-width: 800px) {
+    .expandableText {
+      height: auto; } }
+
+.fade {
+  position: absolute;
+  width: 100%;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), black);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), black);
+  bottom: 0; }
+  @media (min-width: 800px) {
+    .fade {
+      display: none; } }
+
+.expandButton {
+  text-transform: uppercase;
+  text-align: center;
+  color: #696969; }
+  @media (min-width: 800px) {
+    .expandButton {
+      display: none; } }
 
 .imageBlock {
-  width: 30%;
+  width: 100%;
+  text-align: center; }
+  @media (min-width: 800px) {
+    .imageBlock {
+      width: 30%;
+      float: right; } }
+  .imageBlock .landscape {
+    display: block;
+    width: 90%;
+    margin: 0 auto; }
+    @media (min-width: 800px) {
+      .imageBlock .landscape {
+        display: none; } }
+  .imageBlock .cutout {
+    display: none; }
+    @media (min-width: 800px) {
+      .imageBlock .cutout {
+        display: block;
+        width: 100%; } }
+
+.button.button--down {
+  position: absolute;
+  width: 100%;
+  padding-bottom: .5em;
+  text-align: center;
+  color: white;
   bottom: 0; }
-  .imageBlock img {
-    width: 100%; }
+  .button.button--down i.icon-angle-circled-down {
+    font-size: 3em; }
 
 /* Tophat */
 #tophat {

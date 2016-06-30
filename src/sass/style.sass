@@ -6,10 +6,23 @@
 @import "fonts"
 
 /* General Styles */
+$bp5: 500px
+$bp6: 600px
+$bp7: 700px
+$bp8: 800px
+$bp9: 900px
+$bp10: 1000px
+
 
 body
 	font-size: 14px
+	@media(min-width: $bp6)
+		font-size: 16px
+	@media(min-width: $bp8)
+		font-size: 18px	
+p, a
 	font-family: $lato
+p
 	color: white
 a
 	color: $goldenrod
@@ -17,6 +30,10 @@ a
 .container
 	margin-top: 50px
 .playBlock
+	p,a 
+		line-height: 1.2em
+		margin: .5em 0
+	position: relative
 	width: 100%
 	height: calc(100vh - 50px)
 	+striped-background(45deg, .3em, black, $offblack)
@@ -38,19 +55,76 @@ a
 		&--darkPurple
 			+striped-background(45deg, .3em, $ravensPurple1, $ravensPurple2)
 			bottom: 0
+	@media(min-width: $bp8)
+		h2
+			margin: .6em .5em
+			font-size: 2.5em
+		.stripes
+			height: 3em
 .textBlock
 	width: 100%
 	float: left
-	padding: 1em
+	padding: .5em
+	@media(min-width: $bp6)
+		padding: 1em
+	@media(min-width: $bp8)
+		width: 65%		
 .expandableText
-	height: 5em
-.imageBlock
-	width: 30%
+	position: relative
+	width: 100%
+	height: 7em
+	line-height: 1em
+	text-overflow: ellipsis
+	white-space: initial
+	overflow: hidden
+	&.expanded
+		height: auto
+		.fade
+			display: none
+	@media(min-width: $bp8)
+		height: auto
+.fade
+	position: absolute
+	width: 100%
+	height: 3em
+	+linear-gradient(rgba(255,255,255,0), black)
 	bottom: 0
-	img
-		width: 100%
+	@media(min-width: $bp8)
+		display: none
+.expandButton
+	text-transform: uppercase
+	text-align: center
+	color: $darkgray	
+	@media(min-width: $bp8)
+		display: none
+.imageBlock
+	width: 100%
+	text-align: center
+	@media(min-width: $bp8)
+		width: 30%
+		float: right
+	.landscape
+		display: block
+		width: 90%
+		margin: 0 auto
+		@media(min-width: $bp8)
+			display: none
+	.cutout
+		display: none
+		@media(min-width: $bp8)
+			display: block
+			width: 100%
+	a
 
-
+.button.button--down
+	position: absolute
+	width: 100%
+	padding-bottom: .5em
+	text-align: center
+	color: white
+	bottom: 0
+	i.icon-angle-circled-down
+		font-size: 3em
 
 /* Tophat */
 #tophat
