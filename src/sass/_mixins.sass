@@ -20,4 +20,5 @@
 	line-height: ($size - ($border * 2))
 	text-align: center
 
-
+=striped-background($angle, $width, $color1, $color2)
+	background: repeating-linear-gradient($angle, $color1, $color1 $width, $color2 $width, $color2 $width*2)

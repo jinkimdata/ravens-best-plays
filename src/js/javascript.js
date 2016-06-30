@@ -1,6 +1,6 @@
-var dataproject = {
+var ravensBest = {
 	init: function(){
-		//dataproject.share();
+		//ravensBest.share();
 	},
 	share: function(){
 		$(".icon-twitter").on("click", function(){
@@ -20,6 +20,6 @@ var dataproject = {
 	}
 }
 $(document).ready(function(){
-	dataproject.init();
+	ravensBest.init();
 	console.log("connected");
 });

@@ -2949,7 +2949,7 @@
     }, b || (a.jQuery = a.$ = r), r;
 });
 
-var dataproject = {
+var ravensBest = {
     init: function() {},
     share: function() {
         $(".icon-twitter").on("click", function() {
@@ -2972,6 +2972,6 @@ var dataproject = {
 };
 
 $(document).ready(function() {
-    dataproject.init();
+    ravensBest.init();
     console.log("connected");
 });

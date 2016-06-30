@@ -1,6 +1,8 @@
 - var datalink = "http://data.baltimoresun.com/PROJECTLINK/"
 - var datalink = ""
 
+include includes/plays.jade
+
 doctype html
 //if lt IE 7
 	<html class="no-js lt-ie9 lt-ie8 lt-ie7">
@@ -36,15 +38,26 @@ html(class="no-js", lang="en")
 		meta(name="twitter:domain", content="baltimoresun.com")
 
 	body
-		//- include includes/omniture.html
+		include includes/omniture.html
 		
 		.container
-
+			each play in plays
+				.playBlock
+					.headlineBlock
+						h2 #{play.playName}
+						.stripes.stripes--lightPurple
+						.stripes.stripes--darkPurple
+					.textBlock
+						p #{play.playDate}
+						p #{play.playText}
+						a(href="#{play.playVideo}") Watch the video.
+					.imageBlock
+						img(src="https://placeholdit.imgix.net/~text?txtsize=33&w=350&h=700")
+					.button.button--down
 		//- #leaderboard			
 		//- 	include includes/ad-for-body.html
 		
 		//Javascript
-		script(src="#{datalink}js/min/jquery-3.0.0.min.js")
 		script(src="#{datalink}js/app.js")
 		//- script(src="#{datalink}js/app.min.js")
 
