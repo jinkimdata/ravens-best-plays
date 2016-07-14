@@ -467,9 +467,9 @@ body {
   @media (min-width: 600px) {
     body {
       font-size: 16px; } }
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     body {
-      font-size: 18px; } }
+      font-size: 16px; } }
 
 p, a {
   font-family: "Lato", sans-serif; }
@@ -482,22 +482,58 @@ a {
   text-decoration: none; }
 
 .container {
-  margin-top: 50px; }
+  margin-top: 50px;
+  background-color: black;
+  overflow: hidden; }
+
+.sixteenNine {
+  position: relative; }
+  @media (min-width: 700px) {
+    .sixteenNine:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 75%; }
+    .sixteenNine > .playBlock {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0; } }
+  @media (min-width: 900px) {
+    .sixteenNine:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 56.25%; }
+    .sixteenNine > .playBlock {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0; } }
+
+@media (min-width: 900px) and (min-width: 1200px) {
+  .sixteenNine:before {
+    padding-top: 675px; } }
+  @media (min-width: 900px) {
+    .sixteenNine > .playBlock {
+      max-width: 1200px;
+      max-height: 675px; } }
 
 .playBlock {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 50px);
+  margin: 0 auto;
   background: repeating-linear-gradient(45deg, black, black 0.3em, #0C0C0C 0.3em, #0C0C0C 0.6em); }
   .playBlock p, .playBlock a {
-    line-height: 1.2em;
+    line-height: 1.6em;
     margin: .5em 0; }
 
 .headlineBlock {
   position: relative; }
   .headlineBlock h2 {
     position: absolute;
-    margin: .75em .5em;
+    width: 100%;
+    margin: 0 .5em;
     font-size: 1.5em;
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
@@ -511,23 +547,29 @@ a {
     .headlineBlock .stripes--darkPurple {
       background: repeating-linear-gradient(45deg, #3E1D65, #3E1D65 0.3em, #24034B 0.3em, #24034B 0.6em);
       bottom: 0; }
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     .headlineBlock h2 {
-      margin: .6em .5em;
+      width: 80%;
       font-size: 2.5em; }
     .headlineBlock .stripes {
       height: 3em; } }
 
 .textBlock {
   width: 100%;
-  float: left;
   padding: .5em; }
   @media (min-width: 600px) {
     .textBlock {
       padding: 1em; } }
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     .textBlock {
+      float: left;
       width: 65%; } }
+  @media (min-width: 800px) {
+    .textBlock p {
+      font-size: 1.2em; } }
+  @media (min-width: 1000px) {
+    .textBlock p {
+      font-size: 1.4em; } }
 
 .expandableText {
   position: relative;
@@ -541,7 +583,7 @@ a {
     height: auto; }
     .expandableText.expanded .fade {
       display: none; }
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     .expandableText {
       height: auto; } }
 
@@ -553,7 +595,7 @@ a {
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), black);
   background-image: linear-gradient(rgba(255, 255, 255, 0), black);
   bottom: 0; }
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     .fade {
       display: none; } }
 
@@ -561,40 +603,71 @@ a {
   text-transform: uppercase;
   text-align: center;
   color: #696969; }
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     .expandButton {
       display: none; } }
 
-.imageBlock {
+.nav {
   width: 100%;
-  text-align: center; }
-  @media (min-width: 800px) {
+  text-align: center;
+  margin: 1em 0; }
+  @media (min-width: 700px) {
+    .nav {
+      float: left;
+      position: absolute;
+      width: 65%;
+      bottom: 0;
+      left: 0; } }
+
+i.icon-angle-circled-down {
+  font-size: 3em;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  i.icon-angle-circled-down:hover {
+    font-size: 3.3em;
+    color: #a8a8a8; }
+
+.imageBlock {
+  display: none; }
+  @media (min-width: 700px) {
     .imageBlock {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
       width: 30%;
-      float: right; } }
-  .imageBlock .landscape {
-    display: block;
-    width: 90%;
-    margin: 0 auto; }
-    @media (min-width: 800px) {
-      .imageBlock .landscape {
-        display: none; } }
+      text-align: center; } }
+  @media (min-width: 900px) {
+    .imageBlock {
+      height: 95%; } }
   .imageBlock .cutout {
     display: none; }
-    @media (min-width: 800px) {
+    @media (min-width: 700px) {
       .imageBlock .cutout {
+        bottom: 0;
         display: block;
         width: 100%; } }
+    @media (min-width: 1200px) {
+      .imageBlock .cutout {
+        position: relative; } }
 
-.button.button--down {
+.imageFade {
+  display: none;
   position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  padding-bottom: .5em;
-  text-align: center;
-  color: white;
+  height: 7em;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), black);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), black);
   bottom: 0; }
-  .button.button--down i.icon-angle-circled-down {
-    font-size: 3em; }
+  @media (min-width: 700px) {
+    .imageFade {
+      display: block; } }
 
 /* Tophat */
 #tophat {

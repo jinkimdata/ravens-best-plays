@@ -6,20 +6,23 @@
 @import "fonts"
 
 /* General Styles */
+$bp45: 480px
 $bp5: 500px
 $bp6: 600px
 $bp7: 700px
 $bp8: 800px
 $bp9: 900px
 $bp10: 1000px
+$bp11: 1100px
+$bp12: 1200px
 
 
 body
 	font-size: 14px
 	@media(min-width: $bp6)
 		font-size: 16px
-	@media(min-width: $bp8)
-		font-size: 18px	
+	@media(min-width: $bp7)
+		font-size: 16px	
 p, a
 	font-family: $lato
 p
@@ -29,19 +32,37 @@ a
 	text-decoration: none
 .container
 	margin-top: 50px
-.playBlock
-	p,a 
-		line-height: 1.2em
-		margin: .5em 0
+	background-color: black
+	overflow: hidden
+.sixteenNine
 	position: relative
-	width: 100%
-	height: calc(100vh - 50px)
+	@media(min-width: $bp7)
+		+aspect-ratio(16,12)
+	@media(min-width: $bp9)
+		+aspect-ratio(16,9)
+		&:before
+			@media(min-width: $bp12)
+				padding-top: (9/16) * 1200px
+		> .playBlock
+			max-width: 1200px
+			max-height: (9/16) * 1200px
+.playBlock
+	margin: 0 auto
+	p,a 
+		line-height: 1.6em
+		margin: .5em 0
+	// position: relative
+	// width: 100%
+	// height: 100vh
+	// &--0
+	// 	height: calc(100vh - 50px)
 	+striped-background(45deg, .3em, black, $offblack)
 .headlineBlock
 	position: relative
 	h2
 		position: absolute
-		margin: .75em .5em
+		width: 100%
+		margin: 0 .5em
 		font-size: 1.5em
 		text-transform: uppercase
 		font-family: $montserrat
@@ -55,20 +76,27 @@ a
 		&--darkPurple
 			+striped-background(45deg, .3em, $ravensPurple1, $ravensPurple2)
 			bottom: 0
-	@media(min-width: $bp8)
+	@media(min-width: $bp7)
 		h2
-			margin: .6em .5em
+			width: 80%
 			font-size: 2.5em
 		.stripes
 			height: 3em
 .textBlock
 	width: 100%
-	float: left
 	padding: .5em
 	@media(min-width: $bp6)
 		padding: 1em
+	@media(min-width: $bp7)
+		float: left
+		width: 65%
 	@media(min-width: $bp8)
-		width: 65%		
+		p
+			font-size: 1.2em
+	@media(min-width: $bp10)
+		p
+			font-size: 1.4em
+
 .expandableText
 	position: relative
 	width: 100%
@@ -81,7 +109,7 @@ a
 		height: auto
 		.fade
 			display: none
-	@media(min-width: $bp8)
+	@media(min-width: $bp7)
 		height: auto
 .fade
 	position: absolute
@@ -89,42 +117,79 @@ a
 	height: 3em
 	+linear-gradient(rgba(255,255,255,0), black)
 	bottom: 0
-	@media(min-width: $bp8)
+	@media(min-width: $bp7)
 		display: none
 .expandButton
 	text-transform: uppercase
 	text-align: center
 	color: $darkgray	
-	@media(min-width: $bp8)
+	@media(min-width: $bp7)
 		display: none
-.imageBlock
+.nav
 	width: 100%
 	text-align: center
-	@media(min-width: $bp8)
-		width: 30%
-		float: right
-	.landscape
+	margin: 1em 0
+	@media(min-width: $bp7)
+		float: left
+		position: absolute
+		width: 65%
+		bottom: 0
+		left: 0
+i.icon-angle-circled-down
+	font-size: 3em
+	color: white
+	cursor: pointer
+	+transition(all .2s ease)
+	&:hover
+		font-size: 3.3em
+		color: $gray1
+.imageBlock
+	display: none
+	@media(min-width: $bp7)
 		display: block
-		width: 90%
-		margin: 0 auto
-		@media(min-width: $bp8)
-			display: none
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 30%
+		text-align: center
+	@media(min-width: $bp9)
+		height: 95%
 	.cutout
 		display: none
-		@media(min-width: $bp8)
+		@media(min-width: $bp7)
+			// position: absolute
+			bottom: 0
 			display: block
 			width: 100%
+		@media(min-width: $bp12)
+			position: relative
 	a
-
-.button.button--down
+.imageFade
+	display: none
 	position: absolute
-	width: 100%
-	padding-bottom: .5em
-	text-align: center
-	color: white
 	bottom: 0
-	i.icon-angle-circled-down
-		font-size: 3em
+	left: 0
+	width: 100%
+	height: 7em
+	+linear-gradient(rgba(255,255,255,0), black)
+	bottom: 0
+	@media(min-width: $bp7)
+		display: block
+
+// .buttonWrapper
+// 	position: absolute
+// 	width: 100%
+// 	padding-bottom: .5em
+// 	text-align: center
+// 	color: white
+// 	bottom: 0
+// 	i.icon-angle-circled-down
+// 		font-size: 3em
+// 		cursor: pointer
+// 		+transition(all .5s ease)
+// 		&:hover
+// 			font-size: 3.3em
+// 			color: $gray1
 
 /* Tophat */
 #tophat

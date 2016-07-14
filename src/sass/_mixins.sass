@@ -1,3 +1,16 @@
+=aspect-ratio($width, $height)
+	&:before
+		display: block
+		content: ""
+		width: 100%
+		padding-top: ($height/$width) * 100%
+	> .playBlock
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		
 // Clearfix
 =clearfix
 	&:before, &:after 

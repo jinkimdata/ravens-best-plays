@@ -1,5 +1,5 @@
-- var datalink = "http://data.baltimoresun.com/PROJECTLINK/"
-- var datalink = ""
+- var datalink = "http://data.baltimoresun.com/sports/ravens-best-plays/"
+//- var datalink = ""
 
 include includes/plays.jade
 
@@ -43,23 +43,32 @@ html(class="no-js", lang="en")
 		
 		.container
 			each play, index in plays
-				.playBlock
-					.headlineBlock
-						h2 #{play.playName}
-						.stripes.stripes--lightPurple
-						.stripes.stripes--darkPurple
-					.textBlock
-						.expandableText.expandable
-							p #{play.playDate}
+				.sixteenNine
+					.playBlock(class="playBlock--#{index}" name="anchor#{index}" id="anchor#{index}")
+						.headlineBlock
+							h2 #{play.playName}
+							.stripes.stripes--lightPurple
+							.stripes.stripes--darkPurple
+						.textBlock
+							p.date #{play.playDate}
 							p #{play.playText}
-							.fade
-						p.expandButton(data-status=0) - Expand -
-					.imageBlock
-						img.landscape(src="https://placeholdit.imgix.net/~text?txtsize=33&w=1600&h=900")
-						img.cutout(src="https://placeholdit.imgix.net/~text?txtsize=33&w=900&h=1600")
-						a(href="#{play.playVideo}") Watch the video.
-					.button.button--down
-						i.icon-angle-circled-down
+						//- .textBlock
+						//- 	.expandableText.expandable(class='expandable--#{index}')
+						//- 		p.date #{play.playDate}
+						//- 		p #{play.playText}
+						//- 		.fade
+						//- 	p.expandButton(data-status=0 data-slideNum=index) - Expand -
+						.imageBlock
+							img.cutout(src="#{datalink}/images/cutouttest.png")
+							//- img.landscape(class='landscape--#{index}' src="https://placeholdit.imgix.net/~text?txtsize=33&w=1600&h=900")
+							//- a(href="#{play.playVideo}") Watch the video.
+						.imageFade
+						.nav
+							i.upButton.icon-angle-circled-down(data-slideNum=index)
+							i.voteButton.icon-angle-circled-down
+							i.downButton.icon-angle-circled-down(data-slideNum=index)
+						//- .buttonWrapper
+						//- 	i.downButton.icon-angle-circled-down(data-slideNum=index)
 		//- #leaderboard			
 		//- 	include includes/ad-for-body.html
 		
