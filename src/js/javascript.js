@@ -1,29 +1,17 @@
 var ravensBest = {
 	init: function(){
 		//ravensBest.share();
-
-		$('.expandButton').on('click touchend', function(){
-			var thisButton = $(this);
-			var slideNum = thisButton.attr('data-slideNum');
-			if (thisButton.data().status === 0) {
-				$('.landscape--'+slideNum).fadeOut(100, function(){
-					$('.expandable--'+slideNum).addClass('expanded');
-					thisButton.text('- Collapse -');
-					thisButton.data('status',1);
-				});
-			} else {
-				$('.landscape--'+slideNum).fadeIn(100, function() {
-					$('.expandable--'+slideNum).removeClass('expanded');
-					thisButton.text('- Expand -');
-					thisButton.data('status',0);
-				});
-			};
-		});
 		$('.downButton').on('click touchend', function(){
 			var nextSlide = Number($(this).attr('data-slideNum')) + 1;
-			console.log(nextSlide);
-			$('body').animate({
+			$('html, body').animate({
 				scrollTop: $('#anchor'+nextSlide).offset().top
+			}, 500);
+			return false;
+		});
+		$('.upButton').on('click touchend', function(){
+			var prevSlide = Number($(this).attr('data-slideNum')) - 1;
+			$('html, body').animate({
+				scrollTop: $('#anchor'+prevSlide).offset().top
 			}, 500);
 			return false;
 		});

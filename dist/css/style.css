@@ -505,7 +505,7 @@ a {
       display: block;
       content: "";
       width: 100%;
-      padding-top: 56.25%; }
+      padding-top: 62.5%; }
     .sixteenNine > .playBlock {
       position: absolute;
       top: 0;
@@ -515,25 +515,47 @@ a {
 
 @media (min-width: 900px) and (min-width: 1200px) {
   .sixteenNine:before {
-    padding-top: 675px; } }
+    padding-top: 750px; } }
   @media (min-width: 900px) {
     .sixteenNine > .playBlock {
       max-width: 1200px;
-      max-height: 675px; } }
+      max-height: 750px; } }
 
 .playBlock {
   margin: 0 auto;
   background: repeating-linear-gradient(45deg, black, black 0.3em, #0C0C0C 0.3em, #0C0C0C 0.6em); }
   .playBlock p, .playBlock a {
     line-height: 1.6em;
-    margin: .5em 0; }
+    margin: 0.5em 0; }
+
+.voteBlock {
+  position: relative;
+  text-align: center;
+  height: 100vh; }
+  .voteBlock i {
+    position: absolute;
+    color: black;
+    width: 100%;
+    font-size: 3em;
+    margin: 0 0.15em;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+
+.poll {
+  height: 100%;
+  width: 100%; }
+  .poll #ads {
+    display: none; }
 
 .headlineBlock {
   position: relative; }
   .headlineBlock h2 {
     position: absolute;
     width: 100%;
-    margin: 0 .5em;
+    margin: 0 0.5em;
     font-size: 1.5em;
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
@@ -556,7 +578,10 @@ a {
 
 .textBlock {
   width: 100%;
-  padding: .5em; }
+  padding: 0.5em; }
+  .textBlock .date {
+    font-weight: bold;
+    text-transform: uppercase; }
   @media (min-width: 600px) {
     .textBlock {
       padding: 1em; } }
@@ -618,17 +643,23 @@ a {
       width: 65%;
       bottom: 0;
       left: 0; } }
+  .nav i {
+    font-size: 3em;
+    margin: 0 0.15em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
 
-i.icon-angle-circled-down {
-  font-size: 3em;
-  color: white;
+.activeButton {
   cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
-  i.icon-angle-circled-down:hover {
+  color: white; }
+  .activeButton:hover {
     font-size: 3.3em;
-    color: #a8a8a8; }
+    color: #424398; }
+
+.inactiveButton {
+  color: #696969;
+  cursor: default; }
 
 .imageBlock {
   display: none; }
@@ -647,12 +678,10 @@ i.icon-angle-circled-down {
     display: none; }
     @media (min-width: 700px) {
       .imageBlock .cutout {
+        position: absolute;
         bottom: 0;
         display: block;
         width: 100%; } }
-    @media (min-width: 1200px) {
-      .imageBlock .cutout {
-        position: relative; } }
 
 .imageFade {
   display: none;
