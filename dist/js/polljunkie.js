@@ -15,7 +15,7 @@
         url += '&barBgColor=' + escape(options.barBgColor);
         url += '&fontColor=' + escape(options.fontColor);
 
-        var iframe = '<iframe src="' + url + '" height=100%' + ' width=100%' + ' frameBorder="0" scrolling="no" allowTransparency></iframe>';
+        var iframe = '<iframe class="pollFrame" src="' + url + '" ' + ' ' + ' frameBorder="0" scrolling="no" allowTransparency></iframe>';
 
 
 

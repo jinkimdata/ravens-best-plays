@@ -1,5 +1,5 @@
 - var datalink = "http://data.baltimoresun.com/sports/ravens-best-plays/"
-- var datalink = ""
+//- var datalink = ""
 
 include includes/plays.jade
 
@@ -14,11 +14,11 @@ html(class="no-js", lang="en")
 	head
 		//Basic page needs
 		meta(charset="utf-8")
-		title
-		meta(name="description", content="")
+		title Readers Vote: Ravens' Best Plays
+		meta(name="description", content="Vote for the greatest plays in Ravens history")
 		meta(name="author", content="Jin Bae Kim") 
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
-		link(rel="stylesheet", type="text/css", href="#{datalink}/fontello/css/fontello.css")
+		link(rel="stylesheet", type="text/css", href="#{datalink}fontello/css/fontello.css")
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat")
 		link(rel="stylesheet", type="text/css", href="#{datalink}css/style.css")
 
@@ -39,9 +39,15 @@ html(class="no-js", lang="en")
 		meta(name="twitter:domain", content="baltimoresun.com")
 
 	body
-		include includes/omniture.html
-		
+		include includes/omniture.html		
 		.container
+			.splash
+				.splashWrap
+					.headlineWrap
+						h2 Readers vote:
+						h1 Ravens'<br/>Best<br/>Plays >>
+					img.splashImg(src="#{datalink}images/play8.png")
+				.imageFade
 			each play, index in plays
 				.sixteenNine
 					.playBlock(class="playBlock--#{index}" name="anchor#{index}" id="anchor#{index}")
@@ -53,11 +59,8 @@ html(class="no-js", lang="en")
 							p.date #{play.playDate}
 							p #{play.playText}
 						.imageBlock
-							//- img.cutout(src="#{datalink}/images/play#{index}.png")
-							if (index%2 == 0)
-								img.cutout(src="#{datalink}/images/play0.png")
-							else
-								img.cutout(src="#{datalink}/images/play1.png")
+							img.shadow(src="#{datalink}images/play#{index}.png")
+							img.cutout(src="#{datalink}images/play#{index}.png")
 						.imageFade
 						.nav
 							if (index == 0)
@@ -70,12 +73,12 @@ html(class="no-js", lang="en")
 							else
 								i.videoButton.inactiveButton.icon-youtube-play
 							i.downButton.activeButton.icon-angle-circled-down(data-slideNum=index)
-							i.downButton.activeButton.icon-thumbs-up(data-slideNum=9)
+							i.downButton.activeButton.icon-ok-circled2(data-slideNum=9)
 			.voteBlock.playBlock(class="playBlock--10" name="anchor10" id="anchor10")
 				script(type="text/javascript" src="#{datalink}js/polljunkie.js")
 				script(type="text/javascript").
 					PollJunkie.show({"s":"whats-the-best-play-in-ravens-history","width":"300px","height":"300px","code":"crtrem","borderColor":"#241773","barBgColor":"black","fontColor":"black"});
-				i.upButton.activeButton.icon-angle-double-up(data-slideNum=1)
+				//- i.upButton.activeButton.icon-angle-double-up(data-slideNum=1)
 		//- #leaderboard			
 		//- 	include includes/ad-for-body.html
 		

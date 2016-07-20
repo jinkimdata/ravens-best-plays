@@ -6,7 +6,8 @@
 @import "fonts"
 
 /* General Styles */
-$bp45: 480px
+$bp4: 400px
+$bp48: 480px
 $bp5: 500px
 $bp6: 600px
 $bp7: 700px
@@ -15,6 +16,7 @@ $bp9: 900px
 $bp10: 1000px
 $bp11: 1100px
 $bp12: 1200px
+$bp192: 1920px
 
 
 body
@@ -31,9 +33,73 @@ a
 	color: $goldenrod
 	text-decoration: none
 .container
+	// position: relative
 	margin-top: 50px
-	background-color: black
+	// background-color: black
+	+striped-background(45deg, .3em, black, $offblack)
 	overflow: hidden
+.splash
+	position: fixed
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	padding-top: 1em
+	+striped-background(45deg, 2em, rgba(darken($ravensPurple1,10), .8), rgba(darken($ravensPurple2,10), .9))
+	text-align: center
+	z-index: 9999999999
+	cursor: pointer
+	.splashWrap
+		position: relative
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		max-width: 1640px
+		margin: 0 auto
+		text-align: left
+	img
+		position: absolute
+		bottom: -40px
+		right: 0
+		height: 100%
+		width: auto
+		margin: 0 auto
+	.headlineWrap
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		color: white
+		margin-top: .2em
+		@media(min-width: $bp7)
+			padding-left: 2.5em
+	h2
+		font-size: 2em
+		@media(min-width: $bp7)
+			font-size: 3em
+		@media(min-width: $bp9)
+			font-size: 3.5em
+		@media(min-width: $bp12)
+			font-size: 4em
+	h1	
+		margin: 0
+		text-transform: uppercase
+		font-size: 4em
+		line-height: 1em
+		@media(min-width: $bp5)
+			font-size: 5em
+		@media(min-width: $bp7)
+			font-size: 7em
+		@media(min-width: $bp9)
+			font-size: 9em
+		@media(min-width: $bp12)
+			font-size: 11em
+		@media(min-width: $bp192)
+			font-size: 13em
+
+	.imageFade
+		display: block
 .sixteenNine
 	position: relative
 	@media(min-width: $bp7)
@@ -51,25 +117,7 @@ a
 	p,a 
 		line-height: 1.6em
 		margin: 0.5em 0
-	+striped-background(45deg, .3em, black, $offblack)
-.voteBlock
-	position: relative
-	text-align: center	
-	height: 100vh
-	i
-		position: absolute
-		color: black
-		width: 100%
-		font-size: 3em
-		margin: 0 0.15em
-		bottom: 0
-		left: 0
-		+transition(all .2s ease)
-.poll
-	height: 100%
-	width: 100%
-	#ads
-		display: none
+	// +striped-background(45deg, .3em, black, $offblack)
 .headlineBlock
 	position: relative
 	h2
@@ -96,8 +144,10 @@ a
 		.stripes
 			height: 3em
 .textBlock
+	position: relative
 	width: 100%
 	padding: 0.5em
+	z-index: 2
 	.date
 		font-weight: bold
 		text-transform: uppercase
@@ -112,38 +162,12 @@ a
 	@media(min-width: $bp10)
 		p
 			font-size: 1.4em
-.expandableText
+.nav
 	position: relative
 	width: 100%
-	height: 7em
-	line-height: 1em
-	text-overflow: ellipsis
-	white-space: initial
-	overflow: hidden
-	&.expanded
-		height: auto
-		.fade
-			display: none
-	@media(min-width: $bp7)
-		height: auto
-.fade
-	position: absolute
-	width: 100%
-	height: 3em
-	+linear-gradient(rgba(255,255,255,0), black)
-	bottom: 0
-	@media(min-width: $bp7)
-		display: none
-.expandButton
-	text-transform: uppercase
 	text-align: center
-	color: $darkgray	
-	@media(min-width: $bp7)
-		display: none
-.nav
-	width: 100%
-	text-align: center
-	margin: 1em 0
+	padding: 1em 0
+	z-index: 2
 	@media(min-width: $bp7)
 		float: left
 		position: absolute
@@ -164,23 +188,33 @@ a
 	color: $darkgray
 	cursor: default
 .imageBlock
-	display: none
+	position: absolute
+	bottom: 0
+	width: 100%
+	height: 95%
+	opacity: .3
+	z-index: 0
 	@media(min-width: $bp7)
-		display: block
-		position: absolute
-		bottom: 0
 		right: 0
-		width: 30%
-		text-align: center
-	@media(min-width: $bp9)
-		height: 95%
-	.cutout
+		opacity: 1
+	.shadow
 		display: none
 		@media(min-width: $bp7)
-			position: absolute
-			bottom: 0
 			display: block
-			width: 100%
+			position: absolute
+			bottom: 15px
+			right: 15px
+			width: auto
+			height: 100%
+			opacity: .12
+	.cutout
+		position: absolute
+		width: auto
+		height: 100%
+		bottom: 0
+		right: 0
+		@media(min-width: $bp7)
+			height: 80%
 	a
 .imageFade
 	display: none
@@ -188,11 +222,49 @@ a
 	bottom: 0
 	left: 0
 	width: 100%
-	height: 7em
+	height: 30%
+	z-index: 1
 	+linear-gradient(rgba(255,255,255,0), black)
-	bottom: 0
 	@media(min-width: $bp7)
 		display: block
+.playBlock--9
+	.imageBlock
+		.cutout
+			height: auto
+			max-width: 90%
+	@media(min-width: $bp7)
+		.imageBlock
+			.shadow
+				max-width: 45%
+				height: auto
+			.cutout
+				max-width: 35%
+				height: auto
+
+.voteBlock
+	position: relative
+	text-align: center	
+	height: auto
+	i
+		position: absolute
+		width: 100%
+		font-size: 3em
+		margin: 0 0.15em
+		bottom: 0
+		left: 0
+		+transition(all .2s ease)
+.poll
+	width: 100%
+	height: 500px
+	background-color: white
+	padding: 2em 0
+.pollFrame
+	width: 320px
+	height: 100%
+	@media(min-width: $bp48)
+		width: 480px
+		height: 100vh
+		height: 520px
 
 /* Tophat */
 #tophat
