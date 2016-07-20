@@ -76,43 +76,51 @@ a
 		@media(min-width: $bp7)
 			padding-left: 2.5em
 	h2
-		font-size: 2em
+		font-size: 1.3em
 		@media(min-width: $bp7)
-			font-size: 3em
+			font-size: 1.5em
 		@media(min-width: $bp9)
-			font-size: 3.5em
+			font-size: 2em
 		@media(min-width: $bp12)
-			font-size: 4em
+			font-size: 2.5em
 	h1	
 		margin: 0
 		text-transform: uppercase
-		font-size: 4em
+		font-size: 3em
 		line-height: 1em
 		@media(min-width: $bp5)
-			font-size: 5em
+			font-size: 4em
 		@media(min-width: $bp7)
-			font-size: 7em
+			font-size: 5em
 		@media(min-width: $bp9)
-			font-size: 9em
+			font-size: 6em
 		@media(min-width: $bp12)
-			font-size: 11em
+			font-size: 7em
 		@media(min-width: $bp192)
-			font-size: 13em
-	p
+			font-size: 10em
+	.subhead
 		position: absolute
+		bottom: 0
 		font-size: 1em
-		padding: 1em
-		background-color: $offblack
 		color: white
 		z-index: 2
-		+striped-background(45deg, .3em, $ravensBlurple1, $ravensBlurple2)
 		@media(min-width: $bp7)
+			padding: 1em
 			background: none
 			font-size: 1.2em
 			padding-left: 0
 			left: 2.5em
+		span
+			margin: 0 1em
+	.intro
+		font-size: 1.3em
+		max-width: 600px
+		margin-bottom: 2em
+		@media(min-width: $bp7)
+			font-size: 1.5em
 	.imageFade
 		display: block
+		height: 50%
 .sixteenNine
 	position: relative
 	@media(min-width: $bp7)
