@@ -3,7 +3,7 @@
 @import "bourbon/bourbon"
 @import "neat/neat"
 @import "normalize"
-@import "fonts"
+// @import "fonts"
 
 /* General Styles */
 $bp4: 400px
@@ -33,9 +33,7 @@ a
 	color: $goldenrod
 	text-decoration: none
 .container
-	// position: relative
 	margin-top: 50px
-	// background-color: black
 	+striped-background(45deg, .3em, black, $offblack)
 	overflow: hidden
 .splash
@@ -115,7 +113,7 @@ a
 	.intro
 		font-size: 1.3em
 		max-width: 600px
-		margin-bottom: 2em
+		margin-bottom: 1em
 		@media(min-width: $bp7)
 			font-size: 1.5em
 	.imageFade
@@ -139,7 +137,7 @@ a
 		line-height: 1.6em
 		margin: 0.5em 0
 	// +striped-background(45deg, .3em, black, $offblack)
-.headlineBlock
+.subheadBlock
 	position: relative
 	h2
 		position: absolute
@@ -149,6 +147,17 @@ a
 		text-transform: uppercase
 		font-family: $montserrat
 		color: white
+	.shareTools
+		position: absolute
+		bottom: -3em
+		right: 0
+		z-index: 3
+		@media(min-width: $bp7)
+			bottom: 0
+		i
+			font-size: 2em
+			&:hover
+				font-size: 2.5em
 	.stripes
 		width: 100%
 		height: 2em
@@ -195,24 +204,23 @@ a
 	padding: 1em 0
 	z-index: 2
 	@media(min-width: $bp7)
-		float: left
 		position: absolute
 		width: 65%
 		bottom: 0
 		left: 0
-	i
-		font-size: 3em
-		margin: 0 0.15em
-		+transition(all .2s ease)
 .activeButton
 	cursor: pointer
 	color: white
 	&:hover
 		font-size: 3.3em
-		color: $ravensBlurple1
+		color: lighten($ravensBlurple1, 10)
 .inactiveButton
 	color: $darkgray
 	cursor: default
+i
+	font-size: 3em
+	margin: 0 0.15em
+	+transition(all .2s ease)
 .imageBlock
 	position: absolute
 	bottom: 0
@@ -269,8 +277,10 @@ a
 
 .voteBlock
 	position: relative
-	text-align: center	
 	height: auto
+	padding: 2em 0
+	background-color: white
+	text-align: center	
 	i
 		position: absolute
 		width: 100%
@@ -281,7 +291,7 @@ a
 		+transition(all .2s ease)
 .poll
 	width: 100%
-	height: 500px
+	height: 100vh
 	background-color: white
 	padding: 2em 0
 .pollFrame
@@ -290,7 +300,6 @@ a
 	@media(min-width: $bp48)
 		width: 480px
 		height: 100vh
-		height: 520px
 
 /* Tophat */
 #tophat

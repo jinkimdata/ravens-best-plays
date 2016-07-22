@@ -47,7 +47,7 @@
 			"file": "src/index.jade",
 			"settings":
 			{
-				"buffer_size": 3381,
+				"buffer_size": 4419,
 				"line_ending": "Unix"
 			}
 		},
@@ -55,7 +55,7 @@
 			"file": "dist/index.html",
 			"settings":
 			{
-				"buffer_size": 20027,
+				"buffer_size": 22709,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,7 +63,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 2243,
+				"buffer_size": 2315,
 				"line_ending": "Unix"
 			}
 		},
@@ -79,7 +79,15 @@
 			"file": "src/includes/plays.jade",
 			"settings":
 			{
-				"buffer_size": 6851,
+				"buffer_size": 6859,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/includes/omniture.html",
+			"settings":
+			{
+				"buffer_size": 674,
 				"line_ending": "Unix"
 			}
 		},
@@ -87,7 +95,7 @@
 			"file": "src/sass/style.sass",
 			"settings":
 			{
-				"buffer_size": 5148,
+				"buffer_size": 5935,
 				"line_ending": "Unix"
 			}
 		},
@@ -103,7 +111,15 @@
 			"file": "src/sass/_mixins.sass",
 			"settings":
 			{
-				"buffer_size": 794,
+				"buffer_size": 791,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dist/fontello/css/fontello.css",
+			"settings":
+			{
+				"buffer_size": 2202,
 				"line_ending": "Unix"
 			}
 		},
@@ -111,7 +127,7 @@
 			"file": "dist/css/style.css",
 			"settings":
 			{
-				"buffer_size": 17327,
+				"buffer_size": 8483,
 				"line_ending": "Unix"
 			}
 		},
@@ -119,7 +135,7 @@
 			"file": "src/js/javascript.js",
 			"settings":
 			{
-				"buffer_size": 1717,
+				"buffer_size": 2259,
 				"line_ending": "Unix"
 			}
 		},
@@ -127,7 +143,7 @@
 			"file": "dist/js/polljunkie.js",
 			"settings":
 			{
-				"buffer_size": 1220,
+				"buffer_size": 1217,
 				"line_ending": "Unix"
 			}
 		}
@@ -196,6 +212,8 @@
 	],
 	"file_history":
 	[
+		"/Users/jikim/Documents/bsun/online/org/2016/07/ravens-best-plays/dist/js/app.min.js",
+		"/Users/jikim/Documents/bsun/online/org/2016/07/ravens-best-plays/src/includes/ad-for-body.html",
 		"/Users/jikim/Documents/bsun/online/org/2016/07/ravens-best-plays/src/sass/style.sass",
 		"/Users/jikim/Documents/bsun/online/org/2016/07/ravens-best-plays/src/js/polljunkie.js",
 		"/Users/jikim/Documents/bsun/online/org/2016/04/md-shootings-near-you/dist/css/cartodb.css",
@@ -252,6 +270,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"thumb.png",
+			"image\", content=\"\"",
+			"')+\"&",
+			"data-shareText",
+			"headlineBlock",
 			"z-index: 1",
 			"%\n",
 			"bp45",
@@ -344,7 +367,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -353,15 +376,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3381,
+						"buffer_size": 4419,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								76,
-								76
+								2623,
+								2623
 							]
 						],
 						"settings":
@@ -373,7 +396,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -382,7 +405,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20027,
+						"buffer_size": 22709,
 						"regions":
 						{
 						},
@@ -390,7 +413,7 @@
 						[
 							[
 								0,
-								0
+								22709
 							]
 						],
 						"settings":
@@ -400,10 +423,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 22.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -412,15 +435,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2243,
+						"buffer_size": 2315,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								399,
-								399
+								891,
+								899
 							]
 						],
 						"settings":
@@ -434,7 +457,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -462,7 +485,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -471,15 +494,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6851,
+						"buffer_size": 6859,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6849,
-								6849
+								2102,
+								2102
 							]
 						],
 						"settings":
@@ -493,28 +516,57 @@
 					},
 					"stack_index": 10,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 5,
-					"file": "src/sass/style.sass",
+					"file": "src/includes/omniture.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5148,
+						"buffer_size": 674,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4324,
-								4324
+								165,
+								182
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "src/sass/style.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5935,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5171,
+								5171
 							]
 						],
 						"settings":
@@ -523,14 +575,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2577.0,
+						"translation.y": 3639.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "src/sass/_variables.sass",
 					"semi_transient": false,
 					"settings":
@@ -554,24 +606,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "src/sass/_mixins.sass",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 794,
+						"buffer_size": 791,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								71,
+								71
 							]
 						],
 						"settings":
@@ -583,24 +635,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "dist/css/style.css",
+					"buffer": 9,
+					"file": "dist/fontello/css/fontello.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17327,
+						"buffer_size": 2202,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11146,
-								11146
+								1142,
+								1142
 							]
 						],
 						"settings":
@@ -610,56 +662,87 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7949.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "dist/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8483,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8459,
+								8459
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/js/javascript.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2259,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1491,
+								1491
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "src/js/javascript.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1717,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1633,
-								695
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "dist/js/polljunkie.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1220,
+						"buffer_size": 1217,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								495,
-								495
+								568,
+								568
 							]
 						],
 						"settings":
@@ -673,7 +756,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -755,7 +838,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
